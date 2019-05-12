@@ -1,0 +1,29 @@
+{
+  "name": "steps-paginator",
+  "version": "1.0.0",
+  "description": "A simple pagiation react component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/saurabh-mca-github/react-steps-paginator.git"
+  },
+  "keywords": [
+    "laravel-pagination",
+    "pagination",
+    "steps-paginator",
+    "react-pagination"
+  ],
+  "author": "Saurabh Shrivastava",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saurabh-mca-github/react-steps-paginator/issues"
+  },
+  "homepage": "https://github.com/saurabh-mca-github/react-steps-paginator#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "react": "^16.8.6"
+  }
+}
