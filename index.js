@@ -7,8 +7,8 @@ export default class StepsPaginator extends React.Component
         super(props)
         this.state = {
             page: this.props.page || 1,
-            numItemsDisplay: this.props.page || 10,
-            totalNumItems: this.props.page || 100
+            perPage: this.props.perPage || 10,
+            totalItems: this.props.totalItems || 100
         }
     }
 
@@ -23,11 +23,11 @@ export default class StepsPaginator extends React.Component
 
     makeLinks(){
         let links = [];
-        let count = this.state.totalNumItems/this.state.numItemsDisplay
+        let count = this.state.totalItems/this.state.perPage
         //console.log(count)
         for(let i = 1; i < count; i++){
             links.push(
-                <li key={'lp-link-'+i} className="page-item">
+                <li key={'lp-link-'+i} className="page-item {this.props.page == i ? `disabled` : ``}">
                     <a className="page-link" href="javascript:void" onClick={() => this.onClick(i)}>{i}</a>
                 </li>
             );
@@ -40,7 +40,7 @@ export default class StepsPaginator extends React.Component
         return (
             <nav aria-label="Page navigation example">
                 <ul className="pagination">
-                    <li className="page-item">
+                    <li className="page-item {this.props.page == 1 ? 'disabled' : ''}">
                         <a className="page-link" href="#" aria-label="Previous">
                         <span aria-hidden="true">&laquo;</span>
                         <span className="sr-only">Previous</span>
