@@ -27,7 +27,7 @@ export default class StepsPaginator extends React.Component
         //console.log(count)
         for(let i = 1; i < count; i++){
             links.push(
-                <li key={'lp-link-'+i} className="page-item {this.props.page == i ? `disabled` : ``}">
+                <li key={'lp-link-'+i} className={this.state.page == i ? `page-item disabled` : `page-item`}>
                     <a className="page-link" href="javascript:void" onClick={() => this.onClick(i)}>{i}</a>
                 </li>
             );
@@ -40,8 +40,8 @@ export default class StepsPaginator extends React.Component
         return (
             <nav aria-label="Page navigation example">
                 <ul className="pagination">
-                    <li className="page-item {this.props.page == 1 ? 'disabled' : ''}">
-                        <a className="page-link" href="#" aria-label="Previous">
+                    <li className={this.state.page == 1 ? `page-item disabled` : `page-item`}>
+                        <a className="page-link" onClick={() => this.onClick(1)} href="javascript:void" aria-label="Previous">
                         <span aria-hidden="true">&laquo;</span>
                         <span className="sr-only">Previous</span>
                         </a>
