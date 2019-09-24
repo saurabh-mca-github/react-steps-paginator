@@ -8,8 +8,8 @@ export default class StepsPaginator extends React.Component
         super(props)
         this.state = {
             page: this.props.page || 1,
-            perPage: this.props.perPage || 10,
-            totalItems: this.props.totalItems || 100
+            perPage: this.props.perPage || 5,
+            totalItems: this.props.totalItems || 50
         }
     }
 
@@ -75,4 +75,4 @@ export default class StepsPaginator extends React.Component
 }
 
 
-//# sourceURL=laravel-pagination.js
+//# sourceURL=steps-paginator.js
